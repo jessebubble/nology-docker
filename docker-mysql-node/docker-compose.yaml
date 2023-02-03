@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  app:
+    container_name: nology-docker-app
+    depends_on:
+      - mysql
+    restart: always
+    build: .
+    ports:
+      - "3010:3010"
+  mysql:
+    container_name: nology-docker-mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: students_db
+      MYSQL_USER: nology
+      MYSQL_PASSWORD: Dallas0928
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_HOST: 0.0.0.0
+    volumes:
+      - ./data:/data/students
+    ports:
+      - "3306:3306"
+    expose:
+      - 3306
+    
+
+
+

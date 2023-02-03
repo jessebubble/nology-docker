@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    container_name: docker-compose-api
+    restart: always
+    build: .
+    ports:
+      - "3010:3010"
+    links:
+      - mongo
+  mongo:
+    container_name: docker-compose-mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/students

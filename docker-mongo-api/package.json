@@ -1,0 +1,28 @@
+{
+  "name": "node-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon index.js",
+    "test": "NODE_ENV=test mocha --recursive"
+  },
+  "keywords": [],
+  "type": "module",
+  "authors": "Nology.io",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "mocha": "^10.0.0",
+    "mongoose": "^6.5.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
